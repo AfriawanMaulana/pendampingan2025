@@ -11,7 +11,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 z-50 backdrop-blur-2xl flex w-full items-center justify-center p-2 md:p-4">
+        <nav className="sticky top-0 left-0 z-50 backdrop-blur-2xl flex w-full items-center justify-center p-2 md:p-4">
             {/* Desktop */}
             <div className="hidden md:flex gap-20">
                 {navLinks.map((item, index) => (
