@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const navLinks = ["Home", "Sejarah Tor", "Konsep Pendampingan", "Anggota"];
+    const navLinks = ["Home", "Sejarah Tor", "Konsep", "Anggota"];
 
     const scrollToSection = (id: string) => {
         const elementId = document.getElementById(id);

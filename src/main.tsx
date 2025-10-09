@@ -1,4 +1,4 @@
-
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
@@ -7,6 +7,7 @@ import AboutWeb from './components/AboutWeb.tsx'
 import NationalDay from './components/NationalDay.tsx'
 
 createRoot(document.getElementById('root')!).render(
+  <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
@@ -14,4 +15,5 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/national-day' element={<NationalDay />} />
       </Routes>
     </BrowserRouter>
+  </StrictMode>
 )

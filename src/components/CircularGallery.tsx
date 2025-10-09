@@ -479,31 +479,31 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
+        image: `/esa.jpg`,
         text: 'Esa'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
-        text: 'Afriawan Maulana'
+        image: `/afri.jpg`,
+        text: 'Afriawan'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
+        image: `/jeff.jpg`,
         text: 'Jeff'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
+        image: `/khrisna.jpg`,
         text: 'Khrisna'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
-        text: 'Farrel'
+        image: `/farrell.jpg`,
+        text: 'Farrell'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
+        image: `/syauqi.jpg`,
         text: 'Syauqi'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
+        image: `/gavrila.jpg`,
         text: 'Gavrila'
       },
       {
@@ -511,19 +511,19 @@ class App {
         text: 'Stephen'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
-        text: 'Rizky'
+        image: `/ferdy.jpg`,
+        text: 'Ferdy'
       },
       {
         image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
         text: 'Bima'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
+        image: `/topan.jpg`,
         text: 'Topan'
       },
       {
-        image: `https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png`,
+        image: `/afriza.jpg`,
         text: 'Afriza'
       }
     ];

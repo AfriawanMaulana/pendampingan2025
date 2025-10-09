@@ -4,6 +4,7 @@ import CircularGallery from './components/CircularGallery'
 import Navbar from './components/Navbar'
 import { useState } from 'react';
 
+
 function App() {
   const [showFilosofi, setShowFilosofi] = useState(false);
 
@@ -35,15 +36,15 @@ function App() {
           </motion.button>
 
           {/* Mobile View */}
+          
           {showFilosofi && (
-            <div className='fixed top-20 md:hidden w-full h-screen backdrop-blur-3xl'>
-              <button onClick={() => setShowFilosofi(false)} className='absolute top-4 right-4 p-2 rounded-full bg-red-600 hover:bg-red-700 text-white cursor-pointer'>
-                X
-              </button>
-              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
+            <div className='md:hidden flex fixed w-full h-screen backdrop-blur-2xl z-40'>
+              <button onClick={() => console.log('test')} className='absolute top-4 right-4 p-2 rounded-fulshl cursor-pointer'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg> */}
-              <div className='custom-scrollbar h-[75%] bg-white overflow-auto space-y-3 p-4 m-6 rounded-xl shadow-sm shadow-black/50'>
+                </svg>
+              </button>
+              <div className='custom-scrollbar h-[75%] top-20 bg-white overflow-auto space-y-3 p-4 m-6 rounded-xl shadow-sm shadow-black/50'>
                 <p><b><i>Warna Biru</i></b> melambangkan persatuan dan kepercayaan diri, yang penting dalam membangun solidaritas di dalam kelompok untuk mencapai tujuan bersama.</p>
                 <p><b><i>Warna Orange</i></b> memancarkan energi dan antusiasme yang tinggi. Ini melambangkan semangat yang tinggi seperti semboyan teknik yaitu dangbut, selain itu juga sebagai kreativitas dalam mencari solusi dan cara-cara baru untuk menyampaikan ide baru</p>
                 <p><b><i>Warna Abu-abu</i></b> warna ini mencerminkan sifat fleksibilitas dalam berpikir, kita harus bisa melihat situasi dan melihat segala macam solusi yang mungkin terjadi ketika kita mengambil suatu keputusan sehingga dapat mengambil keputusan yang tepat di waktu yang tepat.</p>
@@ -53,7 +54,7 @@ function App() {
                 <p><b><i>Warna Putih</i></b> sendiri juga mewakili kesederhanaan seperti kelompok tor browser</p>
               </div>
             </div>
-          )}
+          )}    
 
           {/* Desktop View */}
           <div className='absolute hidden md:flex flex-col space-y-20 text-center w-full'>
@@ -166,23 +167,26 @@ function App() {
         </div>
       </section>
 
-      <section id='Konsep Pendampingan'>
+      <section id='Konsep'>
         <div className='flex flex-col items-center w-full h-auto space-y-8 p-10 md:p-20'>
           <h1 className='font-black text-3xl md:text-4xl'>Konsep Pendampingan</h1>
-          <div className='flex justify-evenly w-full'>
+          <div className='flex flex-col md:flex-row space-y-10 justify-evenly w-full'>
             <div className='text-2xl md:text-4xl'>
-              <p><b>P</b>roductivity</p>
-              <p><b>R</b>esponsibilty</p>
-              <p><b>I</b>ntelegent</p>
-              <p><b>N</b>asionalism</p>
-              <p><b>T</b>eam work</p>
-              <p><b>L</b>earning</p>
-              <p><b>N</b>etworking</p>
+              <h1 className='text-center bg-orange-500 font-bold text-white'>PRINTLN</h1>
+              <p><b className='text-orange-500'>P</b>roductivity</p>
+              <p><b className='text-orange-500'>R</b>esponsibilty</p>
+              <p><b className='text-orange-500'>I</b>ntelegent</p>
+              <p><b className='text-orange-500'>N</b>asionalism</p>
+              <p><b className='text-orange-500'>T</b>eam work</p>
+              <p><b className='text-orange-500'>L</b>earning</p>
+              <p><b className='text-orange-500'>N</b>etworking</p>
             </div>
             <div className='text-2xl md:text-4xl'>
+              <h1 className='text-center bg-blue-700 font-bold text-white'>VIVAT (HIDUP)</h1>
               <p>Veritas (Kebenaran)</p>
               <p>Probitas (Kejujuran)</p>
               <p>Iustitia (Keadilan)</p>
+              <p className='mt-10 md:mt-20 font-bold text-blue-700 italic'>#LONGLIFETIF</p>
             </div>
           </div>
         </div>
@@ -190,14 +194,16 @@ function App() {
 
       <section id='Anggota'>
         <div className='flex flex-col items-center w-full h-screen space-y-8 p-20'>
-          <h1 className='font-black text-3xl md:text-4xl mt-20'>Anggota Kelompok</h1>
+          <h1 className='font-black text-3xl md:text-4xl mt-20'>We're <i>Tor Browser</i></h1>
           <CircularGallery />
-        </div>
-        <div className='flex flex-col md:flex-row w-full items-center justify-center gap-4 mb-20 font-bold text-xl'>
-          <a href="/about-web">Apa itu pemrograman web?</a>
-          <a href="/national-day">Sejarah Pertempuran 10 November</a>
+          {/* <img src='/tor-group.jpg' alt='tor' width={450} height={150} /> */}
         </div>
       </section>
+      
+      <div className='flex flex-col md:flex-row w-full items-center justify-center gap-4 md:gap-20 mb-20 italic underline underline-offset-2 text-xl'>
+        <a href="/about-web">Apa itu pemrograman web?</a>
+        <a href="/national-day">Sejarah hari kartini</a>
+      </div>
 
     </>
   )
