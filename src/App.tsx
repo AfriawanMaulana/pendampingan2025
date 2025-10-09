@@ -179,7 +179,7 @@ function App() {
               <p><b className='text-orange-500'>P</b>roductivity</p>
               <p><b className='text-orange-500'>R</b>esponsibilty</p>
               <p><b className='text-orange-500'>I</b>ntelegent</p>
-              <p><b className='text-orange-500'>N</b>asionalism</p>
+              <p><b className='text-orange-500'>N</b>ationalist</p>
               <p><b className='text-orange-500'>T</b>eam work</p>
               <p><b className='text-orange-500'>L</b>earning</p>
               <p><b className='text-orange-500'>N</b>etworking</p>
