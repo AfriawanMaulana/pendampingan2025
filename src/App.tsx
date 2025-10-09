@@ -36,10 +36,13 @@ function App() {
           </motion.button>
 
           {/* Mobile View */}
-          
           {showFilosofi && (
-            <div className='md:hidden flex fixed w-full h-screen backdrop-blur-2xl z-40'>
-              <button onClick={() => console.log('test')} className='absolute top-4 right-4 p-2 rounded-fulshl cursor-pointer'>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: showFilosofi ? 1 : 0 }}
+              transition={{ duration: 0.25 }}
+              className='md:hidden flex fixed w-full h-screen backdrop-blur-2xl z-40'>
+              <button onClick={() => setShowFilosofi(false)} className='absolute top-2 right-2 p-2 rounded-fulshl cursor-pointer hover:text-red-500'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
@@ -53,7 +56,7 @@ function App() {
                 <p><b><i>Lingkaran</i></b> sendiri sering kali melambangkan persatuan, hubungan mahasiswa satu dengan yang lain.</p>
                 <p><b><i>Warna Putih</i></b> sendiri juga mewakili kesederhanaan seperti kelompok tor browser</p>
               </div>
-            </div>
+            </motion.div>
           )}    
 
           {/* Desktop View */}
@@ -64,7 +67,7 @@ function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className='border rounded-lg p-4 shadow-lg shadow-black/50 max-w-96 text-sm'
+                className='border rounded-lg p-4 shadow-lg shadow-black/50 w-96 text-sm'
               >
                 <b><i>Warna Biru</i></b> melambangkan persatuan dan kepercayaan diri, yang penting dalam membangun solidaritas di dalam kelompok untuk mencapai tujuan bersama.
               </motion.p>
@@ -73,7 +76,7 @@ function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
                 viewport={{ once: true }}
-                className='border rounded-lg p-4 shadow-lg shadow-black/50 max-w-96 text-sm bg-white/40'
+                className='border rounded-lg p-4 shadow-lg shadow-black/50 w-96 text-sm bg-white/40'
               >
                 <b><i>Warna Orange</i></b> memancarkan energi dan antusiasme yang tinggi. Ini melambangkan semangat yang tinggi seperti semboyan teknik yaitu dangbut, selain itu juga sebagai kreativitas dalam mencari solusi dan cara-cara baru untuk menyampaikan ide baru.
               </motion.p>
@@ -84,7 +87,7 @@ function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
                 viewport={{ once: true }}
-                className='border rounded-lg p-4 shadow-lg shadow-black/50 max-w-96 text-sm bg-white/40'
+                className='border rounded-lg p-4 shadow-lg shadow-black/50 w-96 text-sm bg-white/40'
               >
                 <b><i>Warna Abu-abu</i></b> warna ini mencerminkan sifat fleksibilitas dalam berpikir, kita harus bisa melihat situasi dan melihat segala macam solusi yang mungkin terjadi ketika kita mengambil suatu keputusan sehingga dapat mengambil keputusan yang tepat di waktu yang tepat.
               </motion.p>
@@ -93,7 +96,7 @@ function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
                 viewport={{ once: true }}
-                className='border rounded-lg p-4 shadow-lg shadow-black/50 max-w-96 text-sm bg-white/40'
+                className='border rounded-lg p-4 shadow-lg shadow-black/50 w-96 text-sm bg-white/40'
               >
                 <b><i>Lapisan-lapisan</i></b> yang harus berjalan beriringan/sejalan sehingga dapat tercapainya tujuan kelompok tersebut.
               </motion.p>
@@ -104,7 +107,7 @@ function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
                 viewport={{ once: true }}
-                className='border rounded-lg p-4 shadow-lg shadow-black/50 max-w-96 text-sm bg-white/40'
+                className='border rounded-lg p-4 shadow-lg shadow-black/50 w-96 text-sm bg-white/40'
               >
                 <b><i>Warna Ungu</i></b> sendiri kekuatan, kreativitas yang ada di kelompok tor browser sendiri.
               </motion.p>
@@ -113,7 +116,7 @@ function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
                 viewport={{ once: true }}
-                className='border rounded-lg p-4 shadow-lg shadow-black/50 max-w-96 text-sm bg-white/40 mt-20'
+                className='border rounded-lg p-4 shadow-lg shadow-black/50 w-96 text-sm bg-white/40 mt-20'
               >
                 <b><i>Lingkaran</i></b> sendiri sering kali melambangkan persatuan, hubungan mahasiswa satu dengan yang lain.
               </motion.p>
@@ -122,7 +125,7 @@ function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
                 viewport={{ once: true }}
-                className='border rounded-lg p-4 shadow-lg shadow-black/50 max-w-96 text-sm bg-white/40'
+                className='border rounded-lg p-4 shadow-lg shadow-black/50 w-96 text-sm bg-white/40'
               >
                 <b><i>Warna Putih</i></b> sendiri juga mewakili kesederhanaan seperti kelompok tor browser.
               </motion.p>

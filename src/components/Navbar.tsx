@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 
 
@@ -51,7 +52,11 @@ export default function Navbar() {
                     )}
                 </button>
                 
-                <div className={`${isOpen ? 'opacity-100' : 'opacity-0'} transition-all duration-250 ease-in-out flex flex-col w-full absolute top-21 right-4 bg-white/80 backdrop-blur-lg p-4 rounded-lg shadow-lg shadow-black/50 gap-4`}>
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: isOpen ? 1 : 0 }}
+                    transition={{ duration: 0.5 }}
+                    className={`${isOpen ? 'opacity-100 flex' : 'opacity-0 hidden'} transition-all duration-250 ease-in-out flex-col w-full absolute top-21 bg-white/80 backdrop-blur-lg p-4 rounded-lg shadow-lg shadow-black/50 gap-4`}>
                     {navLinks.map((item, index) => (
                         <button 
                             key={index}
@@ -61,7 +66,7 @@ export default function Navbar() {
                             {item}
                         </button>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </nav>
     )
